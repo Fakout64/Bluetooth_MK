@@ -6,12 +6,11 @@ Mouse and Keyboard is not required for testing but is needed to use the client
 # Changes made to the forked repo
 Configured the boot.sh to boot automatically on startup of the raspberry pi multi-user target using systemctl
 Configurations to the boot.sh added, automatic reconnection with host devices that are near and trusted
-Changed the setup.sh to install.sh
 
 ## Step 1: Setup 
 
 ```bash
- sudo ./install.sh
+ sudo ./setup.sh
 ```
  
  
