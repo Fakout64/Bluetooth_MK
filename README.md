@@ -12,6 +12,8 @@ Configurations to the boot.sh added, automatic reconnection with host devices th
 
 Changed the setup.sh to make sure that --noplugin=input is only added once incase it already exist
 
+Added the install of a service file to systemctl for the autoboot of boot.sh: changes made in setup.sh
+
 ## Step 1: Setup 
 
 ```bash
