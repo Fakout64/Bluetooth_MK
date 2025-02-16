@@ -10,6 +10,8 @@ Configured the boot.sh to boot automatically on startup of the raspberry pi mult
 
 Configurations to the boot.sh added, automatic reconnection with host devices that are near and trusted
 
+Changed the setup.sh to make sure that --noplugin=input is only added once incase it already exist
+
 ## Step 1: Setup 
 
 ```bash
