@@ -9,6 +9,25 @@ sudo PIP_BREAK_SYSTEM_PACKAGES=1 pip3 install git+https://github.com/pybluez/pyb
 sudo cp dbus/org.thanhle.btkbservice.conf /etc/dbus-1/system.d
 sudo systemctl restart dbus.service
 
-sudo sed -i '/^ExecStart=/ s/$/ --noplugin=input/' /lib/systemd/system/bluetooth.service
+# Changes start
+SERVICE_FILE="/lib/systemd/system/bluetooth.service"
+
+# Check if --noplugin=input is already present
+if grep -q 'ExecStart=.*--noplugin=input' "$SERVICE_FILE"; then
+    echo "--noplugin=input is already present in ExecStart."
+else
+    echo "Adding --noplugin=input to ExecStart..."
+
+    # Backup the original file
+    sudo cp "$SERVICE_FILE" "$SERVICE_FILE.bak"
+
+    # Modify ExecStart to include --noplugin=input
+    sudo sed -i '/^ExecStart=/ s/$/ --noplugin=input/' "$SERVICE_FILE"
+
+    echo "Updated Bluetooth service file."
+fi
+
 sudo systemctl daemon-reload
-sudo systemctl restart bluetooth.service
+sudo systemctl restart bluetooth
+echo "Restarted bluetooth service"
+# Changes end
