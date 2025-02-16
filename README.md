@@ -1,26 +1,31 @@
-[![Build Status](https://travis-ci.com/quangthanh010290/keyboard_mouse_emulate_on_raspberry.svg?branch=master)](https://travis-ci.com/quangthanh010290/keyboard_mouse_emulate_on_raspberry)
+# Requirments
+Raspberry PI with bluetooth capatablities
+Rasberry PI os (Preferred:Bullseye)
+Mouse and Keyboard is not required for testing but is needed to use the client
 
-# Make things work first 
+# Changes made to the forked repo
+Configured the boot.sh to boot automatically on startup of the raspberry pi multi-user target using systemctl
+Configurations to the boot.sh added, automatic reconnection with host devices that are near and trusted
+Changed the setup.sh to install.sh
 
 ## Step 1: Setup 
 
-```
- sudo ./setup.sh
+```bash
+ sudo ./install.sh
 ```
  
  
 ## Step 2: Run the Server
 
-```
+```bash
 sudo ./boot.sh
 ```
-
 
 ## Step 3.1: Run Keyboard Client (using physical keyboard)
 
 - Need a physical keyboard connected to raspberry PI board
 
-```
+```bash
 ./keyboard/kb_client.py
 ```
 
@@ -28,21 +33,21 @@ sudo ./boot.sh
 
 - Dont need a physical keyboard connected to raspberry PI board
 
-```
+```bash
 ./keyboard/send_string.py "hello client, I'm a keyboard"
 ```
 
 ## Step 3.3: Run mouse client (using physical mouse)
 
 - Need a physical mouse connected to raspberry PI board
-```
+```bash
 ./mouse/mouse_client.py
 ```
 
 ## Step 3.4: Run Mouse client (no need physical mouse, string mouse data through dbus)
 
 - Dont need a physical mouse connected to raspberry PI board
-```
+```bash
 ./mouse/mouse_emulate.py 0 10 0 0
 ```
 
