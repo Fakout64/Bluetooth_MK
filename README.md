@@ -17,6 +17,7 @@ Added the install of a service file to systemctl for the autoboot of boot.sh: ch
 ## Step 1: Clone repository
 ~~~bash
 git clone https:/github.com/Fakout64/Bluetooth_MK.git
+~~~
 
 ## Step 2: Setup 
 
@@ -31,7 +32,7 @@ git clone https:/github.com/Fakout64/Bluetooth_MK.git
 sudo ./boot.sh
 ```
 
-## Step 3.1: Run Keyboard Client (using physical keyboard)
+## Step 4.1: Run Keyboard Client (using physical keyboard)
 
 - Need a physical keyboard connected to raspberry PI board
 
@@ -39,7 +40,7 @@ sudo ./boot.sh
 ./keyboard/kb_client.py
 ```
 
-## Step 3.2: Run Keyboard Client (no need physical keyboard, send string through dbus)
+## Step 4.2: Run Keyboard Client (no need physical keyboard, send string through dbus)
 
 - Dont need a physical keyboard connected to raspberry PI board
 
@@ -47,14 +48,14 @@ sudo ./boot.sh
 ./keyboard/send_string.py "hello client, I'm a keyboard"
 ```
 
-## Step 3.3: Run mouse client (using physical mouse)
+## Step 4.3: Run mouse client (using physical mouse)
 
 - Need a physical mouse connected to raspberry PI board
 ```bash
 ./mouse/mouse_client.py
 ```
 
-## Step 3.4: Run Mouse client (no need physical mouse, string mouse data through dbus)
+## Step 4.4: Run Mouse client (no need physical mouse, string mouse data through dbus)
 
 - Dont need a physical mouse connected to raspberry PI board
 ```bash
