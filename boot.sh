@@ -11,8 +11,9 @@ sudo systemctl daemon-reload
 sudo /etc/init.d/bluetooth start
 # Update  mac address
 ./updateMac.sh
+USER=$(whoami)
 #Update Name
-./updateName.sh ThanhLe_Keyboard_Mouse
+./updateName.sh $USER
 #Get current Path
 export C_PATH=$(pwd)
 
