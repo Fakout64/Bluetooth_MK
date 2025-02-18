@@ -14,14 +14,18 @@ Changed the setup.sh to make sure that --noplugin=input is only added once incas
 
 Added the install of a service file to systemctl for the autoboot of boot.sh: changes made in setup.sh
 
-## Step 1: Setup 
+## Step 1: Clone repository
+~~~bash
+git clone https:/github.com/Fakout64/Bluetooth_MK.git
+
+## Step 2: Setup 
 
 ```bash
  sudo ./setup.sh
 ```
  
  
-## Step 2: Run the Server
+## Step 3: Run the Server
 
 ```bash
 sudo ./boot.sh
