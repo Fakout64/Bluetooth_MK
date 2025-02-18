@@ -31,8 +31,6 @@ sudo systemctl daemon-reload
 sudo systemctl restart bluetooth
 echo "Restarted bluetooth service"
 
-#!/bin/bash
-
 # Detect the current user
 USER=$(whoami)
 
