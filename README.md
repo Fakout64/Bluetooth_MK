@@ -16,6 +16,7 @@ Added the install of a service file to systemctl for the autoboot of boot.sh: ch
 
 ## Step 1: Clone repository and cd
 ~~~bash
+sudo apt install git
 git clone https:/github.com/Fakout64/Bluetooth_MK.git
 cd Bluetooth_MK
 ~~~
